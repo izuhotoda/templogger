@@ -1,0 +1,13 @@
+To Do List
+
+	_ Add a view in / for the main page
+
+	_ use the structure header - section - aside - footer
+	
+	_ List all temperatures in a unsorted list
+
+	_ Add a 
+
+	_ Add responsive
+
+	_ Add users 
