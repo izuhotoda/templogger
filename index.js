@@ -22,6 +22,8 @@ app.listen(3000, ()=>{
 mongoose.connection.on('open',()=>{
 	console.log('Conected to mongodb.')
 })
+// Serve static files
+app.use(express.static('./public'))
 
 // Template engine
 app.set('view engine', 'ejs')

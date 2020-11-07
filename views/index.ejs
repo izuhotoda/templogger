@@ -3,24 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Index</title>
+	<title>Julia004</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/stylesheets/style.css" type= "text/css">
 </head>
+
 <body>
-	<header>
-		<h1>Welcome page</h1>
-		
+	<header class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul>		
 	</header>
 
-	<section>
-		
-	</section>
-
-	<aside>
-		
+	<aside class="sidenav">
+		<ul>
+			<li><a href="#">Owner</a></li>
+			<li><a href="#">initData</a></li>
+			<li><a href="#">endData</a></li>
+		</ul>
 	</aside>
 
+	<section class="main">
+		<h3>Graph Section</h3>
+		<p>graph temp</p>
+		<div class="container">
+			<canvas id="myChart">
+				 <p>Hello Fallback World</p>
+			</canvas>
+		</div>
+		<ul>
+			<%temp_list.forEach((temp)=>{%>
+				<li><%=temp.value%></li>
+			<%});%>
+		</ul>
+
+	</section>
+	<script src="/scripts/graph.js">
+	</script>
+
 	<footer>
-		
+		<small>from izuho toda</small>
 	</footer>
+
 </body>
 </html>
