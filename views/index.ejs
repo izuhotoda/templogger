@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Julia004</title>
+	<title>Julia005</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/stylesheets/style.css" type= "text/css">
@@ -36,17 +36,18 @@
 		</div>
 		<ul>
 			<%temp_list.forEach((temp)=>{%>
-				<li><%=temp.value%></li>
+				<li><%=temp.value%>		<%=temp.time%></li>
+
 			<%});%>
 		</ul>
 
 	</section>
-	<script src="/scripts/graph.js">
-	</script>
 
 	<footer>
 		<small>from izuho toda</small>
 	</footer>
+
+	<script src="/scripts/graph.js"></script>
 
 </body>
 </html>

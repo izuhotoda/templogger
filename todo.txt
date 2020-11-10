@@ -1,10 +1,12 @@
 To Do List
 
+	_ view complete video for apirest
+
 	_x add a view in / for the main page
 
 	_x use the structure header - section - aside - footer
 
-	_ List all temperatures in a unsorted list
+	_x List all temperatures in a unsorted list
 
 	_x nav bar
 
@@ -12,10 +14,14 @@ To Do List
 
 	_x section graph
 
-	_ fotter
+	_x Fetch to chart
 
-	_ Sticky header
+	_ Update chart
 
 	_ Add responsive
 
 	_ Add users 
+
+	_ fotter
+
+	_ Sticky header

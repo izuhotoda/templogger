@@ -1,13 +1,10 @@
-.navbar body {
-	background-color: ghostwhite;
-}
-
 .navbar ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #111;
+
 }
 
 .navbar li {
@@ -23,7 +20,7 @@
 }
 
 .navbar li a:hover {
-	background-color: #111;
+	background-color: #333;
 }
 
 
@@ -68,11 +65,7 @@
 
 div.container{
 	background-color: whitesmoke;
-	/*
 	width: 75%;
-	*/
-	/*position: relative;
-	margin: auto;
-	height: 80vh;*/
-	width: 70vw;
+	margin-left: 12px;
 }
+	

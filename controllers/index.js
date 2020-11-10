@@ -1,13 +1,15 @@
-db = [{
-	value : 4,
-	time : Date.now()
-},{
-	value : 7,
-	time : Date.now()
-}]
+const Temp = require('../models/temperature')
+
+
+async function getTemps(){
+	return await Temp.find()
+}
 
 module.exports = {
 	index : (req, res, next) => {
-		res.render('../views/index',{temp_list: db})
+		getTemps()
+		.then((temps)=>{
+			res.render('../views/index',{temp_list: temps})
+		})
 	}
 }
