@@ -42,7 +42,7 @@ setInterval(addData, 500)
 
 //////////////////////////////////////////////////////////
 async function getTemps(){ 
-	const response = await fetch('http://192.168.0.26:3000/api')
+	const response = await fetch('http://192.168.0.19:3000/api')
 	const json = await response.json()
 	return json
 }

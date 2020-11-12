@@ -18,7 +18,7 @@ To Do List
 
 	_x Update chart
 
-	_ cors
+	_x cors
 
 	_ add time axis
 
