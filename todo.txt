@@ -16,7 +16,11 @@ To Do List
 
 	_x Fetch to chart
 
-	_ Update chart
+	_x Update chart
+
+	_ cors
+
+	_ add time axis
 
 	_ Add responsive
 

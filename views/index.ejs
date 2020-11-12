@@ -31,13 +31,12 @@
 		<h3>Graph Section</h3>
 		<p>graph temp</p>
 		<div class="container">
-			<canvas id="myChart">
-			</canvas>
+			<canvas id="myChart"></canvas>
 		</div>
+		<button id="clickMe">Click Me</button>
 		<ul>
 			<%temp_list.forEach((temp)=>{%>
 				<li><%=temp.value%>		<%=temp.time%></li>
-
 			<%});%>
 		</ul>
 
