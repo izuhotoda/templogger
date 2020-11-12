@@ -2,7 +2,10 @@ const ctx = document.getElementById('myChart')
 
 dt = {
 	datasets:[{
-		data:[],
+		data:[{
+			t: moment(new Date()),
+			y: 100
+		}],
 		borderColor: 'rgba(36, 47, 64, 0.5)',
 		backgroundColor: 'rgba(54, 54, 54, 0.2)'
 	}]
@@ -15,8 +18,11 @@ const chart = new Chart(ctx,{
 			mantainAspectRatio: false,
 			scales: {
 				xAxes: [{
-					type:'linear',
-					position:'bottom'
+					type:'time',
+					position:'bottom',
+					time: {
+						unit: 'second'
+					}
 				}]
 			}
 		}
@@ -28,8 +34,13 @@ function addData(){
 	chart.data.datasets.forEach((dataset)=>{
 		dataset.label = dataset.data.length
 		dataset.data.push({
+			t: moment(new Date()),
+			y: dataset.data[dataset.data.length-1].y + (Math.random()*2-1)*2})
+		/*
+		dataset.data.push({
 			x: dataset.data.length, 
 			y: dataset.data[dataset.data.length-1].y + (Math.random()*2-1)*2})
+			*/
 	})
 	chart.update()
 }
@@ -38,7 +49,7 @@ btn.addEventListener('click',()=>{
 	addData()	
 })
 
-setInterval(addData, 500)
+setInterval(addData, 100)
 
 //////////////////////////////////////////////////////////
 async function getTemps(){ 
@@ -51,7 +62,7 @@ async function getTemps(){
 getTemps()
 .then(temps=>{
 	temps.forEach((temp, index)=>{	
-		dt.datasets[0].data.push({x: index, y: temp.value})
+		dt.datasets[0].data.push({t: moment(temp.time), y: temp.value})
 	})
 })
 .then( _=> {
